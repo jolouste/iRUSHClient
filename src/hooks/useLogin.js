@@ -10,7 +10,7 @@ export const useLogin = () => {
 		setLoading(true);
 		setError("");
 
-		const response = await fetch("http://localhost:5000/api/auth/login", {
+		const response = await fetch("http://44.204.76.81/api/auth/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

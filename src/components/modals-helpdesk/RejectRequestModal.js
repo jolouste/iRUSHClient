@@ -57,7 +57,7 @@ const RejectRequestModal = ({ modalOpen }) => {
 
 		try {
 			setLoading(true);
-			const url = `http://localhost:5000/api/tickets/servicerequests/rejectrequest/${param.id}`;
+			const url = `/tickets/servicerequests/rejectrequest/${param.id}`;
 			await instance.post(url, rejectRequestData).then(response => {
 				toast.success(response.data.message);
 				setMessage(response.data.message);
