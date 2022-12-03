@@ -71,7 +71,7 @@ const AddVoidReasonModal = ({ modalOpen }) => {
 					<div className="addcategorymodal-modal">
 						<div className="addcategorymodal-modal__wrapper">
 							<div className="addcategorycontainer-modal__paragraph">
-								<p className="addcategorymodal-text">add category modal</p>
+								<p className="addcategorymodal-text">add void reason modal</p>
 							</div>
 						</div>
 
