@@ -1,0 +1,24 @@
+.likert-container {
+	background-image: linear-gradient(
+		rgba(254, 192, 15),
+		rgba(255, 226, 144),
+		rgba(255, 255, 255)
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.likert-container__form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.likert-container__form__wrapper {
+	width: 30%;
+	padding: 50px;
+}
+
+.likert-form__clientdetails {
+	width: 100%;
+}

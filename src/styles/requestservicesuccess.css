@@ -1,0 +1,135 @@
+@font-face {
+	font-family: iRUSHfont;
+	src: url("../assets/fonts/TrajanPro-Regular.ttf");
+}
+
+.container-requestsuccess {
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-requestsuccess__wrapper {
+	width: 100%;
+}
+
+.requestsuccess--container__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.requestsuccessheader__logo {
+	margin-right: 28px;
+}
+
+#requestsuccess-ustlogoblck {
+	width: 84px;
+	height: 84px;
+}
+
+.requestsuccessheader__text {
+	text-transform: uppercase;
+}
+
+#requestsuccessheader__ust {
+	font-family: iRUSHfont;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+#requestsuccessheader__ust-sch {
+	font-family: iRUSHfont;
+	font-size: 25px;
+	font-weight: 100;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+}
+
+.requestsuccess--container__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+.requestsuccesscontent__tiger {
+	margin-right: 50px;
+}
+
+#requestsuccess-tiger {
+	width: 124px;
+	height: 184px;
+}
+
+.requestsuccesscontent__texts {
+	text-align: center;
+}
+
+.requestsuccesscontent-text__header h1 {
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 0.5px;
+}
+
+.requestsuccesscontent-text__paragraph {
+	margin-top: 20px;
+}
+
+.requestsuccesscontent-text__paragraph p {
+	font-size: 14px;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.42);
+	letter-spacing: 0.5px;
+}
+
+.requestsuccesscontent-text__buttons {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.requestsuccess-button {
+	margin-top: 30px;
+}
+
+.btn-redirect {
+	font-size: 25px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+	.container-requestsuccess {
+		width: 85%;
+	}
+
+	.requestsuccess--container__header {
+		padding: 10px;
+	}
+
+	.requestsuccess--container__content {
+		text-align: center;
+	}
+
+	.requestsuccesscontent-text__header {
+		margin: 0;
+	}
+
+	#requestsuccess-tiger {
+		text-align: center;
+		padding: 0;
+		width: 114px;
+		height: 184px;
+	}
+
+	.requestsuccesscontent-text__header h1 {
+		padding: 0;
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.requestsuccesscontent-text__paragraph p {
+		font-size: 12px;
+	}
+}

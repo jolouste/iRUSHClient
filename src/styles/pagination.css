@@ -1,0 +1,22 @@
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.show-entries {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.pagination-container__next-button,
+.pagination-container__prev-button {
+	padding: 0 10px;
+	margin: 0 5px;
+	background-color: rgb(254, 192, 15);
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}

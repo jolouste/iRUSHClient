@@ -1,0 +1,167 @@
+@font-face {
+	font-family: iRUSHfont;
+	src: url("../assets/fonts/TrajanPro-Regular.ttf");
+}
+
+.container-serviceformsuccess {
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-serviceformsuccess__wrapper {
+	width: 100%;
+}
+
+.serviceformsuccess--container__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.serviceformsuccessheader__logo {
+	margin-right: 28px;
+}
+
+#serviceformsuccess-ustlogoblck {
+	width: 144px;
+	height: 144px;
+}
+
+.serviceformsuccessheader__text {
+	text-transform: uppercase;
+}
+
+#serviceformsuccessheader__ust {
+	font-family: iRUSHfont;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+#serviceformsuccessheader__ust-sch {
+	font-family: iRUSHfont;
+	font-size: 35px;
+	font-weight: 100;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+}
+
+.serviceformsuccess--container__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+.serviceformsuccesscontent__tiger {
+	margin-right: 50px;
+}
+
+#serviceformsuccess-tiger {
+	width: 174px;
+	height: 284px;
+}
+
+.serviceformsuccesscontent__texts {
+	text-align: center;
+}
+
+.serviceformsuccesscontent-text__header h1 {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.serviceformsuccesscontent-text__paragraph {
+	margin-top: 20px;
+}
+
+.serviceformsuccesscontent-text__paragraph p {
+	font-size: 18px;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.42);
+	letter-spacing: 0.5px;
+}
+
+.serviceformsuccesscontent-text__buttons {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.serviceformsuccess-button {
+	margin-top: 30px;
+}
+
+.btn-redirect {
+	font-size: 25px;
+}
+
+@media screen and (min-width: 325px) and (max-width: 768px) {
+	.container-serviceformsuccess {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.serviceformsuccessheader__logo {
+		display: flex;
+		justify-content: center;
+		margin-left: 30px;
+	}
+
+	#serviceformsuccess-ustlogoblck {
+		width: 75px;
+		height: 75px;
+	}
+
+	.serviceformsuccessheader__text {
+		margin-top: 10px;
+	}
+
+	#serviceformsuccessheader__ust-sch {
+		font-size: 18px;
+	}
+
+	#serviceformsuccessheader__ust {
+		font-size: 5px;
+	}
+
+	.serviceformsuccess--container__content {
+		display: block;
+		margin-top: 20px;
+		padding: 30px;
+	}
+
+	.serviceformsuccesscontent__tiger {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+	}
+
+	#serviceformsuccess-tiger {
+		width: 140px;
+		height: 219px;
+	}
+
+	.serviceformsuccesscontent__texts {
+		margin-top: 20px;
+	}
+
+	.serviceformsuccesscontent-text__header {
+		margin-top: 10px;
+	}
+
+	.serviceformsuccesscontent-text__header h1 {
+		font-size: 23px;
+	}
+
+	.serviceformsuccesscontent-text__paragraph p {
+		font-size: 15px;
+	}
+
+	.btn btn--longhead__success btn--medium__average {
+		font-size: 40px;
+	}
+}

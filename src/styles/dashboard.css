@@ -1,0 +1,432 @@
+.dashboard-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.dashboard-container__nav {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0) 0px 0px 1px 0px;
+	height: auto;
+}
+
+.dashboard-container__wrapper {
+	padding: 0;
+	display: flex;
+	height: inherit;
+	width: 100%;
+}
+
+.dashboard-container__content__wrapper {
+	display: flex;
+	height: auto;
+}
+
+.dashboard-container__content {
+	margin: 0;
+	height: inherit;
+	width: 100%;
+}
+
+.dashboard-content__servicereport {
+	height: inherit;
+	padding: 0px 10px 0px 10px;
+	overflow-y: visible;
+}
+
+.dashboard-content__servicereport-container {
+	height: inherit;
+}
+
+.servicereport-userscontainer {
+	overflow-y: scroll;
+	height: calc(100vh - 185px);
+	margin-top: 20px;
+}
+
+.servicereport-header {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.servicereport-header h4 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.servicereport-userscontainer::-webkit-scrollbar,
+.ticketreport-ticketcontainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+.servicereport-userscontainer::-webkit-scrollbar-thumb,
+.ticketreport-ticketcontainer::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}
+
+.servicereport-users {
+	padding: 15px 20px;
+	margin: 0 20px 15px 10px;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.servicereport-users__name {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.servicereport-users__role,
+.servicereport-users__email {
+	font-size: 12px;
+	font-style: italic;
+	color: rgb(0, 0, 0, 0.5);
+	font-weight: 600;
+}
+.servicereport-users__details {
+	width: 100%;
+}
+.servicerport-users__otherdetails {
+	margin-top: 28px;
+	width: 100%;
+}
+
+.servicereport-otherdetails__sla {
+	font-size: 12px;
+	color: rgb(0, 0, 0, 0.5);
+	font-weight: 600;
+}
+
+.servicereport_label {
+	padding-right: 10px;
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+}
+
+.dashboard-content__ticketreport {
+	padding: 10px;
+	width: 100%;
+	height: inherit;
+	overflow-y: auto;
+}
+
+.ticketreport-header h2 {
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.ticketreport-ticketcontainer {
+	width: 100%;
+	margin-top: 20px;
+	height: calc(100vh - 185px);
+	overflow: auto;
+}
+
+.ticketcontainer-alltickets {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.alltickets-status__container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.alltickets-status__container__wrapper {
+	margin: 15px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.alltickets-ticketreopened__container {
+	margin: 15px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__ticketcreated {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(254, 192, 15);
+	border-right: 2px solid #000;
+	padding: 10px;
+}
+
+.status-ticket__ticketresolved {
+	background-color: #21860a;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__ticketvoided {
+	background-color: #8c8c8c;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__ticketopen {
+	background-color: #ffcc00;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__ticketreopened {
+	background-color: #fee181;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.status-ticket__ticketoverdue {
+	background-color: #a20409;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__ticketrejected {
+	background-color: #d61c20;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.status-ticket__createdreopenedticket {
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-right: 100px;
+	background-color: rgb(254, 192, 15);
+}
+
+.allticketlength,
+.resolvedticketlength,
+.voidedticketlength,
+.openticketlength,
+.reopenticketlength,
+.rejectedticketlength,
+.overdueticketlength,
+.createdreopenedticklength {
+	font-size: 23px;
+	font-weight: 700;
+}
+
+.loading-container,
+.noavailability__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.loading-container h5 {
+	color: rgb(0, 0, 0, 0.5);
+}
+
+.noavailability__container h3 {
+	color: rgb(0, 0, 0, 0.5);
+}
+
+.ticketcontainer-tickets__ticketlists {
+	padding: 8px;
+	margin: 20px 0;
+}
+
+.ticketcontainer-filtertickets {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px;
+	margin: 20px 0;
+}
+
+.table-container__tickets {
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-collapse: collapse;
+}
+
+td {
+	font-size: 10px;
+	padding: 20px 0;
+}
+
+.tableticket-header {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tableheader-title {
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.tickettable-cell {
+	text-align: center;
+}
+
+#sortIcon {
+	width: 16px;
+	height: 12px;
+}
+
+tr:nth-child(even) {
+	background: rgb(254, 192, 15);
+}
+
+.container-charts {
+	width: auto;
+	margin: 20px 0 10px 0;
+	padding: 10px;
+}
+
+.container-charts__wrapper {
+	padding: 15px;
+}
+
+.charts-header__resolvedticketperusers {
+	display: flex;
+	justify-content: center;
+}
+
+.charts-header__resolvedticketperusers h5 {
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+
+.charts-pieandDoughnut {
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+	display: flex;
+	justify-content: space-between;
+	margin: 25px 0;
+}
+
+.chart {
+	display: flex;
+	justify-content: center;
+}
+
+.charts-barChart {
+	display: flex;
+	justify-content: center;
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.charts-LineChart {
+	margin-top: 25px;
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.charts-pie__container,
+.charts-doughnut__container {
+	margin: 0 100px;
+}
+
+/* @media screen and (min-width: 354px) and (max-width: 768px) {
+	.dashboard-container {
+		height: 100%;
+		width: 100vw;
+		padding: 0;
+		margin: 0;
+	}
+	.dashboard-container__header {
+		padding: 0;
+		margin: 0;
+		height: 25px;
+	}
+	.dashboard-container__nav {
+		display: none;
+	}
+	.dashboard-content__servicereport {
+		height: 250px;
+	}
+	.dashboard-content__servicereport-container {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.servicereport-header {
+		margin: 0;
+		padding: 0 0 10px 0;
+	}
+	.servicereport-userscontainer {
+		padding: 0;
+		height: 193px;
+		margin: 5px 0 0 0;
+		display: flex;
+	}
+	.servicereport-users {
+		padding: 10px;
+		margin: 8px;
+		flex-direction: column;
+	}
+	.servicereport-userscontainer::-webkit-scrollbar {
+		height: 5px;
+	}
+	.servicereport-userscontainer::-webkit-scrollbar-thumb {
+		width: 5px;
+	}
+	.servicereport-users__name {
+		font-size: 12px;
+	}
+	.servicereport-users__role,
+	.servicereport-users__email {
+		font-size: 8px;
+	}
+	.servicereport-users__details {
+		padding: 2px;
+	}
+	.servicerport-users__otherdetails {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.servicereport-otherdetails__sla {
+		font-size: 8px;
+	}
+	.servicereport_label {
+		font-size: 10px;
+	}
+
+	.dashboard-container__content__wrapper {
+		display: block;
+	}
+	.dashboard-content__ticketreport {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+} */

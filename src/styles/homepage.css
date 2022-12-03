@@ -1,0 +1,386 @@
+@font-face {
+	font-family: iRUSHfont;
+	src: url("../assets/fonts/TrajanPro-Regular.ttf");
+}
+
+.homepage-header {
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.2)
+	);
+	display: flex;
+}
+
+.homepage-header-container {
+	margin-left: 50px;
+	padding: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-title {
+	margin-left: 28px;
+}
+
+#header-title__ust-sch {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 35px;
+	font-weight: 100;
+	font-family: iRUSHfont;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+}
+
+#header-title__ust {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: iRUSHfont;
+	font-weight: 400;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+.header-btns {
+	margin-left: 440px;
+}
+
+.btn-login,
+.btn-log {
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#loginbtn,
+#logsbtn {
+	height: 28px;
+	width: 28px;
+	padding: 10px;
+}
+
+#ustlogo {
+	width: 94px;
+	height: 94px;
+}
+
+.container_content {
+	background-color: #fec00f;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container_content-overlay {
+	background-color: #fec00f;
+}
+
+#ustbldg {
+	height: 540px;
+	width: 540px;
+	box-shadow: -24px 27px 19px -8px rgba(0, 0, 0, 0.4);
+	animation: animatePopUp 1s ease-in-out;
+}
+
+.content-overlay__ustbldg {
+	position: relative;
+	top: 40px;
+	left: 180px;
+}
+
+.container_content-paragraph {
+	background-color: #fff;
+	padding: 120px 60px 120px 200px;
+	width: 650px;
+	letter-spacing: 0.5px;
+	text-align: center;
+}
+
+.container_content-paragraph--wrapper {
+	animation: animatePopUp 1s ease-in-out;
+}
+
+.content-paragraph__header {
+	font-family: iRUSHfont;
+	text-transform: uppercase;
+	font-size: 72px;
+}
+
+.content-paragraph__text {
+	font-family: iRUSHfont;
+	text-transform: uppercase;
+	font-size: 21px;
+	padding: 20px 8px 8px 8px;
+}
+
+.content-paragraph__buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.btn-servicerequest,
+.btn-requestreopenticket {
+	padding: 20px;
+}
+
+.footer-container {
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.5)
+	);
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-container__copyright,
+.footer-container__poweredby {
+	padding: 25px 25px 25px 40px;
+	font-size: 8px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Poppins";
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+@keyframes animatePopUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (min-width: 354px) and (max-width: 768px) {
+	body {
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+	}
+
+	.homepage-header {
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-btns {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.btn-login {
+		margin: 0;
+		padding: 0;
+	}
+
+	#loginbtn {
+		width: 35px;
+	}
+
+	.homepage-header-container {
+		margin: 0;
+		padding: 10px;
+	}
+
+	#ustlogo {
+		width: 50px;
+		height: 50px;
+	}
+
+	#ustbldg {
+		width: 100%;
+		height: 274px;
+	}
+
+	#header-title__ust-sch {
+		font-size: 13px;
+	}
+
+	#header-title__ust {
+		font-size: 5px;
+	}
+
+	.container_content {
+		background-color: #fff;
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.container_content-overlay {
+		margin: 0;
+		width: 80%;
+	}
+
+	.content-overlay__ustbldg {
+		width: 100%;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		right: 0;
+	}
+
+	.container_content-paragraph {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.content-paragraph__header {
+		font-size: 50px;
+	}
+
+	.container_content-paragraph--wrapper {
+		margin-top: 50px;
+		padding: 0;
+		display: inline-block;
+	}
+
+	.content-paragraph__text {
+		font-size: 15px;
+	}
+
+	.content-paragraph__buttons {
+		margin: 0;
+		padding: 0;
+		display: block;
+		justify-content: center;
+	}
+
+	.footer {
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+	.footer-container {
+		display: inline-block;
+		text-align: center;
+		margin-top: 20px;
+		padding: 0;
+		width: 100%;
+	}
+
+	.footer-container__copyright,
+	.footer-container__poweredby {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1380px) {
+	body {
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+	}
+
+	.homagepage-header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hompage-header-container {
+		display: none;
+	}
+
+	.header-title {
+		margin-left: 50px;
+	}
+
+	#header-title__ust {
+		font-size: 10px;
+		letter-spacing: 1.4px;
+	}
+
+	#header-title__ust-sch {
+		font-size: 28px;
+	}
+
+	.header-logo {
+		margin: 0;
+	}
+
+	.header-btns {
+		display: none;
+	}
+
+	.btn-login,
+	.btn-log {
+		padding: 2px;
+		display: inline-block;
+	}
+
+	#ustlogo {
+		width: 84px;
+		height: 84px;
+	}
+
+	.container_content {
+		display: inline-block;
+		background-color: #fff;
+	}
+
+	#ustbldg {
+		height: 560px;
+		width: 660px;
+	}
+
+	.content-overlay__ustbldg {
+		display: block;
+		left: 50px;
+		width: 0;
+	}
+
+	.container_content-overlay {
+		width: 50%;
+	}
+
+	.container_content-paragraph {
+		width: auto;
+		padding: 20px;
+	}
+
+	.content-paragraph__text {
+		text-align: center;
+		font-size: 26px;
+	}
+
+	.content-paragraph__buttons {
+		display: block;
+		padding: 0;
+	}
+
+	.content-paragraph__header {
+		margin: 0;
+		padding: 50px 50px 0 50px;
+		font-size: 72px;
+		text-align: center;
+	}
+
+	.content-paragraph__buttons {
+		display: inline-block;
+	}
+
+	.btn-servicerequest,
+	.btn-requestreopenticket {
+		width: 100%;
+	}
+}

@@ -1,0 +1,75 @@
+.requestservice-container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.requestservice-container__wrapper {
+	margin: 0;
+	display: flex;
+	width: 100%;
+}
+
+.requestservice-container__nav {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0) 0px 0px 1px 0px;
+	height: 100%;
+}
+
+.requestservice-container__content {
+	margin: 0;
+	width: 100%;
+	border-right: 1px solid black;
+}
+
+.requestservice-container__content__wrapper {
+	display: flex;
+	height: auto;
+}
+
+.requestservice-content__newservicerequests {
+	height: inherit;
+	padding: 0 25px;
+}
+
+.requestservice-content__servicerequests-container {
+	height: inherit;
+}
+
+.newservicerequests-header {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.newservicerequests-header h4 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.servicerequests-navigationcontainer {
+	margin-top: 20px;
+}
+
+.servicerequests-nav__wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.servicerequests-nav__item {
+	font-weight: 700;
+	padding: 8px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 11px;
+}
+
+.servicerequests-container__content {
+	padding: 10px;
+	width: 100%;
+}
+
+.servicerequestscontainer-service__servicelists {
+	padding: 8px;
+	margin: 20px 0;
+}

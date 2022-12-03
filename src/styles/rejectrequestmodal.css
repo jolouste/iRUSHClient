@@ -1,0 +1,76 @@
+.rejectrequestmodal-container {
+	z-index: 1;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rejectrequestmodal-modal {
+	width: 450px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.778) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	animation: animatePopUp 0.3s ease-in-out;
+}
+
+.rejectrequestcontainer-modal__wrapper {
+	padding: 50px;
+	transition: 0.3s ease-in;
+}
+
+.rejectrequestmodal-text {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.rejectrequestmodal-input {
+	margin-top: 20px;
+	width: 100%;
+	border-radius: 3px;
+}
+
+.rejectrequestmodal-input label {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.rejectrequestmodal-input label::after {
+	content: "*";
+	color: red;
+}
+
+.rejectreason-dropdown__requestservice {
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	padding: 10px;
+}
+
+.remarks__requestservice {
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	padding: 10px 0;
+}
+
+.rejectreason-input__requestservice {
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	padding: 10px 0;
+}
+
+.rejectreason-container__input {
+	height: 150px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	padding: 10px;
+}

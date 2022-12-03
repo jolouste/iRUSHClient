@@ -1,0 +1,165 @@
+@font-face {
+	font-family: iRUSHfont;
+	src: url("../assets/fonts/TrajanPro-Regular.ttf");
+}
+
+.login-container {
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.35)
+		),
+		url(../images/img/ustmainbldg_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.container-loginheader {
+	margin-top: 40px;
+	margin-left: 50px;
+	padding: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginheader__logo {
+	margin-right: 28px;
+}
+
+#login-ustlogoblck {
+	width: 144px;
+	height: 144px;
+}
+
+.loginheader--text {
+	text-transform: uppercase;
+}
+
+#loginheader__ust {
+	font-family: iRUSHfont;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+#loginheader__ust-sch {
+	font-family: iRUSHfont;
+	font-size: 35px;
+	font-weight: 100;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+}
+
+.login-container__user {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 5px;
+	animation: animatePopUp 0.5s ease-in-out;
+}
+
+.login-container__user--wrapper {
+	width: 50%;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.48) 0px 5px 15px;
+	padding: 35px;
+}
+
+.container-user__emailaddress,
+.container-user__password {
+	margin: 5px 0 12px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.user-input__emailaddress,
+.user-input__password {
+	box-shadow: 8px 8px 16px 3px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+
+.userinput__emailaddress,
+.userinput__password {
+	width: 100%;
+	outline: none;
+	border: none;
+	text-align: center;
+	font-size: 15px;
+}
+
+.login-container__button {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: auto;
+}
+
+.button-user__login {
+	width: 100%;
+}
+
+.login-container__forgotpass {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.login-container__loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes animatePopUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+	.container-loginheader {
+		margin-top: 50px;
+		margin-left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 28px;
+	}
+
+	.login-container__user--wrapper {
+		width: 250px;
+		height: 240px;
+	}
+
+	.container-user__emailaddress {
+		width: 100%;
+		height: 55px;
+	}
+
+	#loginheader__ust {
+		font-size: 8px;
+		line-height: 12px;
+	}
+
+	#loginheader__ust-sch {
+		font-size: 18px;
+	}
+
+	#login-ustlogoblck {
+		width: 94px;
+		height: 94px;
+	}
+}

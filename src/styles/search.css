@@ -1,0 +1,22 @@
+.search-container {
+	width: 190px;
+	padding: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+}
+
+.search-container__wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.search-input {
+	border: none;
+	outline: none;
+}
+
+.search-icon {
+	width: 16px;
+	height: 24px;
+	margin-right: 10px;
+}

@@ -1,0 +1,20 @@
+.rejectreason-content__container {
+	overflow-y: scroll;
+	height: calc(100vh - 140px);
+	margin-top: 20px;
+}
+
+.rejectreasoncontent__header h2 {
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.ticketstats-content__container::-webkit-scrollbar {
+	width: 5px;
+}
+
+.ticketstats-content__container::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}

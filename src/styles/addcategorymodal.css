@@ -1,0 +1,76 @@
+.addcategorymodal-container {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.addcategorymodal-modal {
+	width: 450px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.778) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	animation: animatePopUp 0.3s ease-in-out;
+}
+
+.addcategorymodal-modal__wrapper {
+	padding: 25px;
+	transition: 0.3s ease-in;
+}
+
+.addcategorycontainer-modal__paragraph {
+	text-align: center;
+}
+
+.addcategorymodal-text {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.addcategorymodal-input {
+	width: 100%;
+	border-radius: 3px;
+}
+
+.addcategorymodal-input label {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.addcategorymodal-input label::after {
+	content: "*";
+	color: red;
+}
+
+.categoryname__setting {
+	padding: 0 20px 20px 20px;
+}
+
+.categoryname-setting__input {
+	padding-bottom: 35px;
+}
+
+.userinput-categoryname,
+.userinput-categorydescription {
+	width: 100%;
+	border-radius: 8px;
+	box-shadow: 8px 8px 16px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container-settings__buttons {
+	padding: 8px 20px 20px 20px;
+}
+
+.modal-btns__wrapper {
+	float: right;
+}

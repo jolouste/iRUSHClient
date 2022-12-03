@@ -1,0 +1,157 @@
+.itsupportdashboard-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.itsupportdashboard-container__nav {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0) 0px 0px 1px 0px;
+	height: auto;
+}
+
+.itsupportdashboard-container__wrapper {
+	padding: 0;
+	display: flex;
+	height: inherit;
+	width: 100%;
+}
+
+.itsupportdashboard-container__content {
+	margin: 0;
+	height: inherit;
+	width: 100%;
+}
+
+.itsupportdashboard-container__content__wrapper {
+	display: flex;
+	height: auto;
+}
+
+.itsupportdashboard-content__notifications {
+	height: inherit;
+	padding: 0px 10px 0px 10px;
+	overflow-y: visible;
+	width: 25%;
+}
+
+.itsupportdashboard-content__servicereport-container {
+	height: inherit;
+}
+
+.itsupportnotification-header {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.itsupportnotification-header h4 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.itsupportdashboard-content__ticketreport {
+	padding: 10px;
+	width: 100%;
+	height: inherit;
+	overflow-y: auto;
+}
+
+.itsupportticketreport-header h2 {
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.itsupportticketreport-ticketcontainer {
+	width: 100%;
+	margin-top: 20px;
+	height: calc(100vh - 185px);
+	overflow: auto;
+}
+
+.itsupportticketcontainer-alltickets {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.itsupportassigntickets-status__container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.itsupportassigntickets-status__container__wrapper {
+	margin: 15px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.itsupportticket-ticket__ticketcreated {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(254, 192, 15);
+	border-right: 2px solid #000;
+	padding: 10px;
+}
+
+.itsupportticket-ticket__ticketresolved {
+	background-color: #21860a;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.itsupportticket-ticket__ticketopen {
+	background-color: #ffcc00;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.itsupportticket-ticket__ticketoverdue {
+	background-color: #a20409;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.itsupportticket-ticket__ticketvoided {
+	background-color: #8c8c8c;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.itsupportticket-ticket__ticketreopen {
+	background-color: #fee181;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.itsupportticketreport-ticketcontainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+.itsupportticketreport-ticketcontainer::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}

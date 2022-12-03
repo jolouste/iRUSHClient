@@ -1,0 +1,135 @@
+.settings-container {
+	margin: 0;
+	width: 100%;
+}
+
+.settings-container__wrapper {
+	margin: 0;
+	display: flex;
+	width: 100%;
+}
+
+.content-category-details {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.settings-details__data {
+	padding: 0px 35px;
+}
+
+.settings-details__createdAt {
+	margin: 15px 0;
+}
+
+.settings-details__name {
+	display: flex;
+	flex-direction: column;
+}
+
+.settings-details__description {
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0;
+}
+
+.settings-details__name label,
+.settings-details__description label,
+.settings-details__createdAt label {
+	font-weight: 600;
+	font-size: 14px;
+	padding: 2px;
+}
+
+.settings-settingdetailscontent {
+	padding: 0px 35px;
+	height: calc(75vh - 60px);
+	width: 100%;
+	margin: 10px;
+	overflow: auto;
+}
+
+.settings-details__namecontainer {
+	padding: 5px 18px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 8px 8px 16px 3px rgb(0 0 0 / 10%);
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.settings-details__descriptioncontainer {
+	padding: 5px 18px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 8px 8px 16px 3px rgb(0 0 0 / 10%);
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-weight: 600;
+	font-size: 15px;
+	height: 200px;
+	outline: none;
+}
+
+.settings-details__clerkcontaineremail {
+	padding: 5px 18px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 8px 8px 16px 3px rgb(0 0 0 / 10%);
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-weight: 600;
+	height: 200px;
+	font-size: 15px;
+}
+
+.settings-details__descriptioncontainerinput {
+	border: none;
+	background-color: transparent;
+	font-weight: 600;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+}
+
+.settings-details__emailclerkcontainer {
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 15px;
+	border: none;
+}
+
+.settings-details__buttons {
+	display: flex;
+	justify-content: flex-end;
+	float: right;
+	width: 150px;
+}
+
+.settings-buttons__delete {
+	margin: 5px;
+}
+
+.settings-buttons__update {
+	margin: 5px 0px 5px 5px;
+}
+
+#clerkData {
+	margin: 15px 0;
+}
+
+#clerkEmail_input {
+	padding-bottom: 35px;
+}
+
+.settings-settingdetailscontent::-webkit-scrollbar {
+	width: 5px;
+}
+
+.settings-settingdetailscontent::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}

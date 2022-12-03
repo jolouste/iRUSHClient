@@ -1,0 +1,118 @@
+.profile-container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.profile-container__wrapper {
+	margin: 0;
+	display: flex;
+	width: 100%;
+}
+
+.profile-container__nav {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0) 0px 0px 1px 0px;
+	height: 100%;
+}
+
+.profile-container__content {
+	margin: 0;
+	width: 100%;
+	border-right: 1px solid black;
+}
+
+.header_viewinguser {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.container-userdetails__loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 200px;
+}
+
+.container-userdetails__loading h4 {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.content-userprofile-details {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.userprofile-details__data {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.userprofile-details__data {
+	padding: 0px 35px;
+}
+
+.userprofile-details__createdAt {
+	margin: 15px 0;
+}
+
+.user-userprofiledetailscontent {
+	padding: 0px 35px;
+	height: calc(75vh - 120px);
+	width: 100%;
+	margin: 10px;
+	overflow: auto;
+}
+
+.user-userprofiledetailscontent::-webkit-scrollbar {
+	width: 5px;
+}
+
+.user-userprofiledetailscontent::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}
+
+.userdetails-profilecontent__wrapper {
+	display: flex;
+}
+
+.user-details__name-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.user-details__name-container label {
+	font-weight: 600;
+	font-size: 14px;
+	padding: 2px;
+}
+
+.loggeduser-details__namecontainer {
+	padding: 5px 18px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 8px 8px 16px 3px rgb(0 0 0 / 10%);
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.profile-user__buttons {
+	display: flex;
+	justify-content: flex-end;
+	float: right;
+	width: 250px;
+}
+
+.profile-buttons__updateuser {
+	margin: 5px 0px 5px 10px;
+}
+
+.profile-buttons__chnagepass {
+	margin: 5px 0px 5px 10px;
+}

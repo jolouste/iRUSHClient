@@ -1,0 +1,30 @@
+.settings-container__settingslists {
+	padding: 8px;
+	margin: 20px 0;
+}
+
+.table-container__settings {
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-collapse: collapse;
+}
+
+.tablesettings-header {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tablesetting-button {
+	padding: 8px;
+	margin: 20px 0;
+	width: 140px;
+	float: right;
+}
+
+.categories-content__container::-webkit-scrollbar {
+	width: 5px;
+}
+
+.categories-content__container::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}

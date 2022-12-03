@@ -1,0 +1,157 @@
+.helpdeskdashboard-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.helpdeskdashboard-container__nav {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0) 0px 0px 1px 0px;
+	height: auto;
+}
+
+.helpdeskdashboard-container__wrapper {
+	padding: 0;
+	display: flex;
+	height: inherit;
+	width: 100%;
+}
+
+.helpdeskdashboard-container__content {
+	margin: 0;
+	height: inherit;
+	width: 100%;
+}
+
+.helpdeskdashboard-container__content__wrapper {
+	display: flex;
+	height: auto;
+}
+
+.helpdeskdashboard-content__notifications {
+	height: inherit;
+	padding: 0px 10px 0px 10px;
+	overflow-y: visible;
+	width: 25%;
+}
+
+.helpdeskdashboard-content__servicereport-container {
+	height: inherit;
+}
+
+.helpdesknotification-header {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.helpdesknotification-header h4 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.helpdeskdashboard-content__ticketreport {
+	padding: 10px;
+	width: 100%;
+	height: inherit;
+	overflow-y: auto;
+}
+
+.helpdeskticketreport-header h2 {
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.helpdeskticketreport-ticketcontainer {
+	width: 100%;
+	margin-top: 20px;
+	height: calc(100vh - 185px);
+	overflow: auto;
+}
+
+.helpdeskticketcontainer-alltickets {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.helpdeskassigntickets-status__container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.helpdeskassigntickets-status__container__wrapper {
+	margin: 15px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.helpdeskticket-ticket__ticketcreated {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(254, 192, 15);
+	border-right: 2px solid #000;
+	padding: 10px;
+}
+
+.helpdeskticket-ticket__ticketresolved {
+	background-color: #21860a;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.helpdeskticket-ticket__ticketopen {
+	background-color: #ffcc00;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.helpdeskticket-ticket__ticketoverdue {
+	background-color: #a20409;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.helpdeskticket-ticket__ticketrejected {
+	background-color: #d61c20;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.helpdeskticket-ticket__ticketreopen {
+	background-color: #fee181;
+	border-right: 2px solid #000;
+	padding: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.helpdeskticketreport-ticketcontainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+.helpdeskticketreport-ticketcontainer::-webkit-scrollbar-thumb {
+	background: rgba(110, 110, 110, 0.395);
+	border-radius: 20px;
+}
