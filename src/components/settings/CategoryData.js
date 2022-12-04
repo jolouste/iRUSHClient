@@ -33,6 +33,7 @@ const CategoryData = () => {
 			.then(response => {
 				setLoading(true);
 				toast.success(response.data.message);
+				navigate("/settings");
 			})
 			.catch(error => {
 				toast.error(error.response.data.message);

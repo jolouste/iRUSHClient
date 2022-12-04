@@ -31,8 +31,11 @@ const RejectReasonData = () => {
 			.then(response => {
 				setLoading(true);
 				toast.success(response.data.message);
+				navigate("/settings");
 			})
 			.catch(error => {
+				toast.error(error.response.data.message);
+
 				if (error.response.status === 401) {
 					window.location.href = "/login";
 				}
@@ -59,6 +62,10 @@ const RejectReasonData = () => {
 				navigate("/settings");
 			})
 			.catch(error => {
+				if (error) {
+					toast.error(error.response.data.message);
+				}
+
 				if (error.response.status === 401) {
 					window.location.href = "/login";
 				}
