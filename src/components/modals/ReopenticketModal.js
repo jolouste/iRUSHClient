@@ -69,7 +69,7 @@ function ReopenticketModal({ setReopenticketOpenModal }) {
 								<div className="container-modal__paragraph">
 									<p className="modal-text">
 										Enter your{" "}
-										<span className="text-emailadd">email Address </span>
+										<span className="text-emailadd">email address </span>
 										so we can verify and send you the requests you have made to
 										the University of Santo Tomas - Office of the Registrar.
 									</p>
