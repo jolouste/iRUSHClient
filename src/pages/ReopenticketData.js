@@ -222,7 +222,6 @@ const ReopenticketData = () => {
 													</div>
 												</div>
 											</div>
-
 											{requestedResolvedTickets.status === "Resolved" && (
 												<>
 													<div className="reopenticket-status__container">
@@ -303,9 +302,9 @@ const ReopenticketData = () => {
 													<div className="reopenticket-status__container">
 														Voided At:
 														<label>
-															{moment(
-																requestedResolvedTickets.requestedAt
-															).format("YYYY-MM-DD HH:mm:ss")}
+															{moment(requestedResolvedTickets.voidedAt).format(
+																"YYYY-MM-DD HH:mm:ss"
+															)}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -334,6 +333,32 @@ const ReopenticketData = () => {
 																>
 																	{requestedResolvedTickets.remarks}
 																</p>
+															</div>
+														</div>
+													</div>
+												</>
+											)}
+											{requestedResolvedTickets.status === "Reopened" && (
+												<>
+													<div className="reopenticket-status__container">
+														Reopened At:
+														<label>
+															{moment(
+																requestedResolvedTickets.reopenedAt
+															).format("YYYY-MM-DD HH:mm:ss")}
+														</label>
+													</div>
+													<div className="clientdetails-thirdlayer">
+														<div className="container-clientdetails__category">
+															<div className="clientdetails__category">
+																<label> Issue </label>
+															</div>
+															<div className="cotainer-course__clientinput">
+																<div className="clientcategory-input">
+																	<p className="form-client__input">
+																		{requestedResolvedTickets.issue}
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
