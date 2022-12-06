@@ -109,7 +109,7 @@ const VoidingReasonsLists = ({
 												</td>
 												<td className="tickettable-cell">
 													{moment(voidreason.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"YYYY/MM/DD HH:mm:ss"
 													)}
 												</td>
 											</tr>

@@ -107,7 +107,7 @@ const RejectingReasonLists = ({
 												</td>
 												<td className="tickettable-cell">
 													{moment(solution.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"YYYY/MM/DD HH:mm:ss"
 													)}
 												</td>
 											</tr>

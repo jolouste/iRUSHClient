@@ -303,7 +303,7 @@ const ReopenticketData = () => {
 														Voided At:
 														<label>
 															{moment(requestedResolvedTickets.voidedAt).format(
-																"YYYY-MM-DD HH:mm:ss"
+																"YYYY/MM/DD HH:mm:ss"
 															)}
 														</label>
 													</div>
@@ -345,7 +345,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.reopenedAt
-															).format("YYYY-MM-DD HH:mm:ss")}
+															).format("YYYY/MM/DD HH:mm:ss")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -371,7 +371,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.rejectedAt
-															).format("YYYY-MM-DD HH:mm:ss")}
+															).format("YYYY/MM/DD HH:mm:ss")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -413,7 +413,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.createdAt
-															).format("YYYY-MM-DD HH:mm:ss")}
+															).format("YYYY/MM/DD HH:mm:ss")}
 														</label>
 													</div>
 												</>

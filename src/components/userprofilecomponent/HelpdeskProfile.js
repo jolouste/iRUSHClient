@@ -109,7 +109,7 @@ const Profile = () => {
 											<nobr>
 												{" "}
 												<p className="requester-details__container">
-													{moment(user.createdAt).format("YYYY-MM-DD HH:mm:ss")}
+													{moment(user.createdAt).format("YYYY/MM/DD HH:mm:ss")}
 												</p>
 											</nobr>
 										</div>
