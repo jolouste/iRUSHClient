@@ -87,7 +87,7 @@ const BarChart = () => {
 							},
 							title: {
 								display: true,
-								text: "CURRENT REJECTED TICKETS PER CATEGORY",
+								text: "CURRENT REOPENED TICKETS PER CATEGORY",
 							},
 						},
 					}}

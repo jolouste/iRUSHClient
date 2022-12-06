@@ -200,7 +200,7 @@ const Ticketlist = ({ loading, dataTickets, setDataTickets }) => {
 														</td>
 														<td className="tickettable-cell">
 															{moment(ticket.createdAt).format(
-																"YYYY-MM-DD HH:mm:ss"
+																"YYYY/MM/DD HH:mm:ss"
 															)}
 														</td>
 														<td className="tickettable-cell">

@@ -73,7 +73,7 @@ const PieChart = () => {
 								},
 								title: {
 									display: true,
-									text: "CURRENT RESOLVED TICKETS ACCORDING TO CATEGORY",
+									text: "CURRENT VOIDED TICKETS ACCORDING TO CATEGORY",
 								},
 							},
 						}}

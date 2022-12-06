@@ -87,7 +87,7 @@ const BarChart = () => {
 							},
 							title: {
 								display: true,
-								text: "CURRENT RESOLVED TICKETS PER CATEGORY",
+								text: "CURRENT VOIDED TICKETS PER CATEGORY",
 							},
 						},
 					}}

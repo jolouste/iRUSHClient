@@ -79,7 +79,7 @@ const DoughnutChart = () => {
 								},
 								title: {
 									display: true,
-									text: "CURRENT REJECTED TICKETS ACCORDING TO PRIORITY",
+									text: "CURRENT REOPENED TICKETS ACCORDING TO PRIORITY",
 								},
 							},
 						}}

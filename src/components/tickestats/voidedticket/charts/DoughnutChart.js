@@ -78,7 +78,7 @@ const DoughnutChart = () => {
 								},
 								title: {
 									display: true,
-									text: "CURRENT RESOLVED TICKETS ACCORDING TO PRIORITY",
+									text: "CURRENT VOIDED TICKETS ACCORDING TO PRIORITY",
 								},
 							},
 						}}

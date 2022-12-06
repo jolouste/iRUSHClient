@@ -149,18 +149,6 @@ const ItOpenticketslist = ({ openTickets, loading, setOpenTickets }) => {
 													/>
 												</span>
 											</th>
-											<th className="tableheader-title">
-												Status
-												<span>
-													<img
-														id="sortIcon"
-														src={sortIcon}
-														alt=""
-														onClick={() => sorting("status")}
-														style={{ cursor: "pointer" }}
-													/>
-												</span>
-											</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -195,24 +183,11 @@ const ItOpenticketslist = ({ openTickets, loading, setOpenTickets }) => {
 													</td>
 													<td className="tickettable-cell">
 														{moment(ticket.createdAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"YYYY/MM/DD HH:mm:ss"
 														)}
 													</td>
 													<td className="tickettable-cell">
 														<strong>{ticket.priority.toUpperCase()}</strong>
-													</td>
-													<td className="tickettable-cell">
-														{/* <strong> </strong> */}
-														{/* set conditional statement based on data */}
-														<strong>
-															{ticket.status === "Rejected" ? (
-																<span style={{ color: "#d61c20" }}>
-																	{ticket.status.toUpperCase()}
-																</span>
-															) : (
-																<span> {ticket.status.toUpperCase()}</span>
-															)}
-														</strong>
 													</td>
 												</tr>
 											);

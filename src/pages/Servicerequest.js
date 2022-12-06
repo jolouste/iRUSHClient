@@ -199,7 +199,7 @@ function Servicerequest() {
 
 														<div className="container-clientdetails__course">
 															<div className="clientdetails__course">
-																<label> Course </label>
+																<label> Program </label>
 															</div>
 															<div className="cotainer-course__clientinput">
 																<div className="clientcourse-input">

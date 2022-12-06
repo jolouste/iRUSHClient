@@ -153,18 +153,6 @@ const Rejectedticketslist = ({
 													/>
 												</span>
 											</th>
-											<th className="tableheader-title">
-												Status
-												<span>
-													<img
-														id="sortIcon"
-														src={sortIcon}
-														alt=""
-														onClick={() => sorting("status")}
-														style={{ cursor: "pointer" }}
-													/>
-												</span>
-											</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -199,16 +187,11 @@ const Rejectedticketslist = ({
 													</td>
 													<td className="tickettable-cell">
 														{moment(ticket.rejectedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"YYYY/MM/DD HH:mm:ss"
 														)}
 													</td>
 													<td className="tickettable-cell">
 														<strong>{ticket.priority.toUpperCase()}</strong>
-													</td>
-													<td className="tickettable-cell">
-														<strong>
-															<span> {ticket.status.toUpperCase()}</span>
-														</strong>
 													</td>
 												</tr>
 											);
