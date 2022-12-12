@@ -40,12 +40,14 @@ import TicketData from "./pages/helpdesksupport/TicketData";
 import HelpdeskNewServiceRequestsData from "./pages/helpdesksupport/requests/HelpdeskNewServiceRequestsData";
 import HelpdeskRejectedServiceRequestsData from "./pages/helpdesksupport/requests/HelpdeskRejectedServiceRequestsData";
 import HelpdeskReopenedTicketRequestsData from "./pages/helpdesksupport/requests/HelpdeskReopenedTicketRequestsData";
+import HelpdeskViewFile from "./pages/helpdesksupport/HelpdeskViewFile";
 
 //IT SUPPORT ROUTES
 import ItDashboard from "./pages/itsupport/ItDashboard";
 import ItTickets from "./pages/itsupport/ItTickets";
 import ItProfile from "./components/userprofilecomponent/ItProfile";
 import ItTicketData from "./pages/itsupport/ItTicketData";
+import ViewFile from "./pages/admin/ViewFile";
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -135,6 +137,11 @@ function App() {
 								path="/settings/voidreason/:id"
 								element={<VoidReasonData />}
 							/>
+							<Route
+								exact
+								path="/servicerequests/getfile/:id"
+								element={<ViewFile />}
+							/>
 							<Route exact path="/tickets" element={<Tickets />} />
 							<Route exact path="/tickets/:id" element={<RequestedTicket />} />
 							<Route exact path="/profile/:id" element={<Profile />} />
@@ -183,6 +190,11 @@ function App() {
 								exact
 								path="/helpdesksupport/reopenedticketrequests/:id"
 								element={<HelpdeskReopenedTicketRequestsData />}
+							/>
+							<Route
+								exact
+								path="/helpdesksupport/servicerequests/getfile/:id"
+								element={<HelpdeskViewFile />}
 							/>
 							<Route exact path="*" element={<Pagebroken />} />
 						</Route>

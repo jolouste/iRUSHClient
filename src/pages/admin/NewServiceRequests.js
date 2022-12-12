@@ -230,7 +230,7 @@ const NewServiceRequests = () => {
 											<p>
 												<a
 													className="requester-details__container"
-													href={`${serviceRequestData.attachments}`}
+													href={`/servicerequests/getfile/${serviceRequestData._id}`}
 												>
 													{serviceRequestData.attachments}
 												</a>
