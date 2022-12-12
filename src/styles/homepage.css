@@ -282,7 +282,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1380px) {
+@media screen and (min-width: 768px) and (max-width: 1480px) {
 	body {
 		margin: 0;
 		padding: 0;
@@ -382,5 +382,41 @@
 	.btn-servicerequest,
 	.btn-requestreopenticket {
 		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1660px) and (max-width: 1980px) {
+	.homepage-header {
+		padding: 25px;
+	}
+
+	.container_content {
+		background-color: #fff;
+	}
+
+	#ustlogo {
+		width: 140px;
+		height: 150px;
+	}
+
+	#ustbldg {
+		width: 740px;
+		height: 740px;
+	}
+
+	#header-title__ust {
+		font-size: 18px;
+	}
+
+	#header-title__ust-sch {
+		font-size: 50px;
+	}
+
+	.container_content-overlay {
+		padding: 40px;
+	}
+
+	.container_content-paragraph {
+		padding: 250px 150px 250px 250px;
 	}
 }

@@ -185,7 +185,7 @@ const ReopenticketData = () => {
 															<p className="form-client__input">
 																{moment(
 																	requestedResolvedTickets.requestedAt
-																).format("YYYY-MM-DD HH:mm:ss")}
+																).format("YYYY/MM/DD HH:mm:ss")}
 															</p>
 														</div>
 													</div>
@@ -229,7 +229,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.resolvedAt
-															).format("YYYY-MM-DD HH:mm:ss")}
+															).format("YYYY/MM/DD HH:mm:ss")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">

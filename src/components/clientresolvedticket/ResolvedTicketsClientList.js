@@ -170,7 +170,7 @@ const ResolvedTicketsClientList = ({
 
 														<td className="reopentickettable-cell">
 															{moment(ticket.createdAt).format(
-																"DD-MM-YYYY HH:mm:ss"
+																"DD/MM/YYYY HH:mm:ss"
 															)}
 														</td>
 
