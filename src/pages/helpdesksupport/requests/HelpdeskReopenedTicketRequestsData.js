@@ -220,7 +220,7 @@ const HelpdeskReopenedTicketRequestsData = () => {
 										<label id="label-createdlast"> Resolved At: </label>
 										<label>
 											{moment(serviceRequestData.resolvedAt).format(
-												"YYYY-MM-DD HH:mm:ss"
+												"MMMM D YYYY, h:mm:ss a"
 											)}
 										</label>
 									</div>
@@ -229,7 +229,7 @@ const HelpdeskReopenedTicketRequestsData = () => {
 										<label id="label-createdlast"> Requested At: </label>
 										<label>
 											{moment(serviceRequestData.createdAt).format(
-												"YYYY-MM-DD HH:mm:ss"
+												"MMMM D YYYY, h:mm:ss a"
 											)}
 										</label>
 									</div>
@@ -263,7 +263,7 @@ const HelpdeskReopenedTicketRequestsData = () => {
 											<label id="label-createdlast"> Reopened At: </label>
 											<label>
 												{moment(serviceRequestData.reopenedAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</label>
 										</div>

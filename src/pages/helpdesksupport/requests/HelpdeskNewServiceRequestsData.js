@@ -219,7 +219,7 @@ const HelpdeskNewServiceRequestsData = () => {
 										<label id="label-createdlast"> Requested At: </label>
 										<label>
 											{moment(serviceRequestData.createdAt).format(
-												"YYYY-MM-DD HH:mm:ss"
+												"MMMM D YYYY, h:mm:ss a"
 											)}
 										</label>
 									</div>

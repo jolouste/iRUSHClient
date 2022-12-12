@@ -142,7 +142,7 @@ const VoidReasonData = () => {
 												{" "}
 												<p className="requester-details__container">
 													{moment(voidReasonData.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>
@@ -153,7 +153,7 @@ const VoidReasonData = () => {
 											<nobr>
 												<p className="requester-details__container">
 													{moment(voidReasonData.updatedAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>

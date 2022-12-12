@@ -164,7 +164,9 @@ const ItTicketData = () => {
 										<div className="requester-details__createdlast">
 											<label id="label-createdlast"> Created Last: </label>
 											<label>
-												{moment(ticket.createdAt).format("YYYY-MM-DD HH:mm:ss")}
+												{moment(ticket.createdAt).format(
+													"MMMM D YYYY, h:mm:ss a"
+												)}
 											</label>
 										</div>
 
@@ -228,7 +230,7 @@ const ItTicketData = () => {
 													<label id="label-createdlast"> Date Resolved: </label>
 													<label>
 														{moment(ticket.resolvedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -260,7 +262,7 @@ const ItTicketData = () => {
 													<label id="label-createdlast"> Date Voided: </label>
 													<label>
 														{moment(ticket.voidedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -292,7 +294,7 @@ const ItTicketData = () => {
 													<label id="label-createdlast"> Date Resolved: </label>
 													<label>
 														{moment(ticket.resolvedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -310,7 +312,7 @@ const ItTicketData = () => {
 													<label id="label-createdlast"> Date Reopened: </label>
 													<label>
 														{moment(ticket.reopenedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>

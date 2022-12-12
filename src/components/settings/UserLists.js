@@ -131,7 +131,9 @@ const CategoriesLists = ({ clerkData, loading, setClerkData }) => {
 												<td className="tickettable-cell">{user.email}</td>
 												<td className="tickettable-cell">{user.role}</td>
 												<td className="tickettable-cell">
-													{moment(user.createdAt).format("YYYY/MM/DD HH:mm:ss")}
+													{moment(user.createdAt).format(
+														"MMMM D YYYY, h:mm:ss a"
+													)}
 												</td>
 											</tr>
 										);

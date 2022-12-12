@@ -185,7 +185,7 @@ const ReopenticketData = () => {
 															<p className="form-client__input">
 																{moment(
 																	requestedResolvedTickets.requestedAt
-																).format("YYYY/MM/DD HH:mm:ss")}
+																).format("MMMM D YYYY, h:mm:ss a")}
 															</p>
 														</div>
 													</div>
@@ -229,7 +229,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.resolvedAt
-															).format("YYYY/MM/DD HH:mm:ss")}
+															).format("MMMM D YYYY, h:mm:ss a")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -303,7 +303,7 @@ const ReopenticketData = () => {
 														Voided At:
 														<label>
 															{moment(requestedResolvedTickets.voidedAt).format(
-																"YYYY/MM/DD HH:mm:ss"
+																"MMMM D YYYY, h:mm:ss a"
 															)}
 														</label>
 													</div>
@@ -345,7 +345,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.reopenedAt
-															).format("YYYY/MM/DD HH:mm:ss")}
+															).format("MMMM D YYYY, h:mm:ss a")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -371,7 +371,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.rejectedAt
-															).format("YYYY/MM/DD HH:mm:ss")}
+															).format("MMMM D YYYY, h:mm:ss a")}
 														</label>
 													</div>
 													<div className="clientdetails-thirdlayer">
@@ -413,7 +413,7 @@ const ReopenticketData = () => {
 														<label>
 															{moment(
 																requestedResolvedTickets.createdAt
-															).format("YYYY/MM/DD HH:mm:ss")}
+															).format("MMMM D YYYY, h:mm:ss a")}
 														</label>
 													</div>
 												</>

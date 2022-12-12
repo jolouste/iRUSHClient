@@ -163,7 +163,8 @@ function Servicerequest() {
 															<div className="cotainer-name__clientinput">
 																<div className="clientname-input">
 																	<p className="form-client__input">
-																		{clientData.firstName} {clientData.lastName}
+																		{clientData.lastName},{" "}
+																		{clientData.firstName}
 																	</p>
 																</div>
 															</div>

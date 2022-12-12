@@ -146,7 +146,7 @@ const RejectReasonData = () => {
 												{" "}
 												<p className="requester-details__container">
 													{moment(rejectReasonData.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>
@@ -157,7 +157,7 @@ const RejectReasonData = () => {
 											<nobr>
 												<p className="requester-details__container">
 													{moment(rejectReasonData.updatedAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>

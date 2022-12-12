@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../styles/rejectedservicerequests.css";
 import FilterCategory from "../filters/FilterCategory";
 import FilterDate from "../filters/FilterDate";
-import Search from "../filters/Search";
+import SearchRef from "../filters/SearchRef";
 import Pagination from "../filters/Pagination";
 import RejectedServiceRequestsLists from "../newservicereqlists-helpdesk/RejectedServiceRequestsLists";
 import instance from "../../axios/axios";
@@ -72,7 +72,10 @@ const HelpdeskRejectedServiceRequests = ({ servicereqNavId }) => {
 							/>
 						</div>
 						<div className="filtertickets-searchandreport__container">
-							<Search setSearch={search => setSearch(search)} />
+							<SearchRef
+								search={search}
+								setSearch={search => setSearch(search)}
+							/>
 						</div>
 					</div>
 

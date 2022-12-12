@@ -142,7 +142,7 @@ const SolutionData = () => {
 												{" "}
 												<p className="requester-details__container">
 													{moment(solutionData.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>
@@ -153,7 +153,7 @@ const SolutionData = () => {
 											<nobr>
 												<p className="requester-details__container">
 													{moment(solutionData.updatedAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>

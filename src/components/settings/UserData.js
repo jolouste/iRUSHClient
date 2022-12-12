@@ -179,7 +179,7 @@ const UserData = () => {
 											{" "}
 											<p className="requester-details__container">
 												{moment(userClerkData.createdAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</p>
 										</nobr>
@@ -190,7 +190,7 @@ const UserData = () => {
 										<nobr>
 											<p className="requester-details__container">
 												{moment(userClerkData.updatedAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</p>
 										</nobr>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../../styles/newservicerequests.css";
 import FilterCategory from "../../../components/filters/FilterCategory";
 import FilterDate from "../../../components/filters/FilterDate";
-import Search from "../../../components/filters/Search";
+import SearchRef from "../../../components/filters/SearchRef";
 import NewServiceRequestslist from "../../../components/newservicereq/newservicerequest/NewServiceRequestslist";
 import Pagination from "../../../components/filters/Pagination";
 import PieChart from "../../../components/newservicereq/newservicerequest/charts/PieChart";
@@ -71,7 +71,7 @@ const NewServiceRequests = ({ servicereqNavId }) => {
 							/>
 						</div>
 						<div className="filtertickets-searchandreport__container">
-							<Search setSearch={search => setSearch(search)} />
+							<SearchRef setSearch={search => setSearch(search)} />
 						</div>
 					</div>
 

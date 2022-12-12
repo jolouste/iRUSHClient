@@ -51,6 +51,16 @@ const NewServiceRequestsLists = ({
 		}
 	};
 
+	//get the first characters of each word in ticket category
+	const getFirstChar = category => {
+		const splitStr = category.split(" ");
+		let firstChar = "";
+		for (let i = 0; i < splitStr.length; i++) {
+			firstChar += splitStr[i].charAt(0);
+		}
+		return firstChar;
+	};
+
 	return (
 		<>
 			<div className="servicerequestscontainer-service__servicelists">
@@ -89,18 +99,6 @@ const NewServiceRequestsLists = ({
 														src={sortIcon}
 														alt=""
 														onClick={() => sorting("subject")}
-														style={{ cursor: "pointer" }}
-													/>
-												</span>
-											</th>
-											<th className="tableheader-title">
-												Category
-												<span>
-													<img
-														id="sortIcon"
-														src={sortIcon}
-														alt=""
-														onClick={() => sorting("category")}
 														style={{ cursor: "pointer" }}
 													/>
 												</span>
@@ -170,14 +168,14 @@ const NewServiceRequestsLists = ({
 															(window.location.pathname = `helpdesksupport/servicerequests/${id}`)
 														}
 													>
-														<strong>{service.requestNo}</strong>
+														<strong>
+															{" "}
+															{service.requestNo} -{" "}
+															{getFirstChar(service.category).toUpperCase()}
+														</strong>
 													</td>
 													<td className="tickettable-cell">
 														{service.subject}
-													</td>
-													<td className="tickettable-cell">
-														{" "}
-														{service.category}
 													</td>
 													<td className="tickettable-cell">
 														{service.requester}
@@ -187,7 +185,7 @@ const NewServiceRequestsLists = ({
 													</td>
 													<td className="tickettable-cell">
 														{moment(service.createdAt).format(
-															"YYYY/MM/DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</td>
 													<td className="tickettable-cell">

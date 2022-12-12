@@ -36,7 +36,9 @@ const HelpdeskNotifications = ({ assignedTicketData, error }) => {
 											</div>
 
 											<div className="notification-ticket__tickettimestamp">
-												{moment(ticket.updatedAt).format("YYYY-MM-DD HH:mm:ss")}
+												{moment(ticket.updatedAt).format(
+													"MMMM D YYYY, h:mm:ss a"
+												)}
 											</div>
 
 											<div className="notification-ticket__ticketdesc">

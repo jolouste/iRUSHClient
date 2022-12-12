@@ -147,7 +147,7 @@ const CategoryData = () => {
 												{" "}
 												<p className="requester-details__container">
 													{moment(categoryData.createdAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>
@@ -158,7 +158,7 @@ const CategoryData = () => {
 											<nobr>
 												<p className="requester-details__container">
 													{moment(categoryData.updatedAt).format(
-														"YYYY-MM-DD HH:mm:ss"
+														"MMMM D YYYY, h:mm:ss a"
 													)}
 												</p>
 											</nobr>

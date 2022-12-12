@@ -51,6 +51,16 @@ const Ticketlist = ({ loading, dataTickets, setDataTickets }) => {
 		}
 	};
 
+	//get the first characters of each word in ticket category
+	const getFirstChar = ticketCategory => {
+		const splitStr = ticketCategory.split(" ");
+		let firstChar = "";
+		for (let i = 0; i < splitStr.length; i++) {
+			firstChar += splitStr[i].charAt(0);
+		}
+		return firstChar;
+	};
+
 	return (
 		<>
 			<div className="ticketcontainer-tickets__ticketlists">
@@ -90,18 +100,6 @@ const Ticketlist = ({ loading, dataTickets, setDataTickets }) => {
 															src={sortIcon}
 															alt=""
 															onClick={() => sorting("ticketSubject")}
-															style={{ cursor: "pointer" }}
-														/>
-													</span>
-												</th>
-												<th className="tableheader-title">
-													Category
-													<span>
-														<img
-															id="sortIcon"
-															src={sortIcon}
-															alt=""
-															onClick={() => sorting("ticketCategory")}
 															style={{ cursor: "pointer" }}
 														/>
 													</span>
@@ -183,28 +181,70 @@ const Ticketlist = ({ loading, dataTickets, setDataTickets }) => {
 																(window.location.pathname = `/tickets/${id}`)
 															}
 														>
-															<strong>{ticket.ticketNo}</strong>
-														</td>
-														<td className="tickettable-cell">
-															{ticket.ticketSubject}
-														</td>
-														<td className="tickettable-cell">
-															{" "}
-															{ticket.ticketCategory}
-														</td>
-														<td className="tickettable-cell">
-															{ticket.requester}
-														</td>
-														<td className="tickettable-cell">
-															{ticket.clientUnit.toUpperCase()}
-														</td>
-														<td className="tickettable-cell">
-															{moment(ticket.createdAt).format(
-																"YYYY/MM/DD HH:mm:ss"
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{ticket.ticketNo} -{" "}
+																	{getFirstChar(
+																		ticket.ticketCategory
+																	).toUpperCase()}
+																</span>
+															) : (
+																<strong>
+																	{ticket.ticketNo} -{" "}
+																	{getFirstChar(
+																		ticket.ticketCategory
+																	).toUpperCase()}
+																</strong>
 															)}
 														</td>
 														<td className="tickettable-cell">
-															<strong>{ticket.priority.toUpperCase()}</strong>
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{ticket.ticketSubject}
+																</span>
+															) : (
+																ticket.ticketSubject
+															)}
+														</td>
+														<td className="tickettable-cell">
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{ticket.requester}
+																</span>
+															) : (
+																ticket.requester
+															)}
+														</td>
+														<td className="tickettable-cell">
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{ticket.clientUnit}
+																</span>
+															) : (
+																ticket.clientUnit
+															)}
+														</td>
+														<td className="tickettable-cell">
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{moment(ticket.createdAt).format(
+																		"MMMM D YYYY, h:mm:ss a"
+																	)}
+																</span>
+															) : (
+																moment(ticket.createdAt).format(
+																	"MMMM D YYYY, h:mm:ss a"
+																)
+															)}
+														</td>
+														<td className="tickettable-cell">
+															{ticket.status === "Rejected" ? (
+																<span style={{ color: "#d61c20" }}>
+																	{ticket.priority.toUpperCase()}
+																</span>
+															) : (
+																<span> {ticket.priority.toUpperCase()}</span>
+															)}
 														</td>
 														<td className="tickettable-cell">
 															<strong>

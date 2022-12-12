@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../styles/reopenservicerequest.css";
 import FilterCategory from "../filters/FilterCategory";
 import FilterDate from "../filters/FilterDate";
-import Search from "../filters/Search";
+import SearchRef from "../filters/SearchRef";
 import Pagination from "../filters/Pagination";
 import ReopenTicketRequestsLists from "../../components/newservicereqlists-helpdesk/ReopenTicketRequestsLists";
 import instance from "../../axios/axios";
@@ -69,7 +69,7 @@ const HelpdeskReopenedTicketRequests = ({ servicereqNavId }) => {
 							/>
 						</div>
 						<div className="filtertickets-searchandreport__container">
-							<Search setSearch={search => setSearch(search)} />
+							<SearchRef setSearch={search => setSearch(search)} />
 						</div>
 					</div>
 

@@ -141,7 +141,7 @@ const RejectedServiceRequests = () => {
 											<label id="label-createdlast"> Date Requested:</label>
 											<label>
 												{moment(serviceRequestData.requestedAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</label>
 										</div>
@@ -153,7 +153,7 @@ const RejectedServiceRequests = () => {
 											<label id="label-rejecttedlast"> Date Rejected: </label>
 											<label>
 												{moment(serviceRequestData.rejectedAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</label>
 										</div>
