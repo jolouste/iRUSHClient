@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useParams } from "react-router-dom";
 import { Buttons } from "../../assets/buttons";
 import instance from "../../axios/axios";
+import Header from "../../components/Header";
+import AdminNavbar from "../../components/navbar/AdminNavbar";
 
 const ViewFile = () => {
 	const param = useParams();
@@ -15,12 +17,20 @@ const ViewFile = () => {
 		instance
 			.get(`/tickets/getfile/${param.id}`, {
 				responseType: "blob",
-				headers: {
-					"Content-Type": "application/pdf",
-				},
 			})
 			.then(response => {
-				const file = new Blob([response.data], { type: "application/pdf" });
+				console.log(response.data);
+				const file = new Blob([response.data], {
+					type:
+						"application/pdf" ||
+						"image/png" ||
+						"image/jpeg" ||
+						"image/jpg" ||
+						"application/vnd.ms-excel" ||
+						"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ||
+						"text/csv",
+				});
+
 				const fileURL = URL.createObjectURL(file);
 				setFile(fileURL);
 			})
@@ -37,19 +47,39 @@ const ViewFile = () => {
 
 	return (
 		<>
-			<div className="viewfile-container">
-				{file && (
-					<iframe src={file} title="file" width="100%" height="100%"></iframe>
-				)}
+			<div className="requestservice-container">
+				<div className="requestservice-container__wrapper">
+					<div className="requestservice-container__nav">
+						<AdminNavbar />
+					</div>
+					<div className="requestservice-container__content">
+						<div className="requestservice-container__header">
+							<Header />
+						</div>
 
-				<div className="viewfile-button-container">
-					<Buttons
-						buttonSize="btn--medium"
-						buttonStyle="btn--primary--solid"
-						onClick={() => (window.location.href = "/dashboard")}
-					>
-						REDIRECT TO DASHBOARD
-					</Buttons>
+						<div className="viewfile-container__content__wrapper">
+							<div className="viewfile-container">
+								{file && (
+									<iframe
+										src={file}
+										title="file"
+										width="100%"
+										height="100%"
+										frameBorder="0"
+									></iframe>
+								)}
+								<div className="viewfile-button-container">
+									<Buttons
+										buttonSize="btn--medium"
+										buttonStyle="btn--primary--solid"
+										onClick={() => window.open(file, "_blank")}
+									>
+										OPEN FILE IN NEW TAB
+									</Buttons>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>
