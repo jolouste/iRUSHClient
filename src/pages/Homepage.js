@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import RequestserviceModal from "../components/modals/RequestserviceModal";
 import ustBLDG from "../images/img/UST_mainbldg.JPG";
 import ustLogo from "../images/img/UST_logo.png";
-import loginBTN from "../images/svg/button.svg";
-import logsBTN from "../images/svg/log.svg";
 import ReopenticketModal from "../components/modals/ReopenticketModal";
 
 const Homepage = () => {
@@ -44,17 +42,23 @@ const Homepage = () => {
 						<div className="header-btns">
 							<Link to="/login">
 								<div className="btn-login">
-									<img id="loginbtn" src={loginBTN} alt=" " />
+									<Buttons
+										buttonSize="btn--medium"
+										buttonStyle="btn--solid__servicerequest"
+									>
+										LOGIN
+									</Buttons>
 								</div>
 							</Link>
 
 							<div className="btn-log">
-								<img
-									id="logsbtn"
-									src={logsBTN}
-									alt=" "
+								<Buttons
+									buttonSize="btn--medium"
+									buttonStyle="btn--solid__servicerequest"
 									onClick={() => setReopenticketModalOpen(true)}
-								/>
+								>
+									TICKET LOGS
+								</Buttons>
 							</div>
 						</div>
 					</div>

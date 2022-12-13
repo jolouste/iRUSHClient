@@ -207,14 +207,16 @@ const RequestedTicket = () => {
 											<label id="label-createdlast"> Date Requested: </label>
 											<label>
 												{moment(ticket.requestedAt).format(
-													"YYYY-MM-DD HH:mm:ss"
+													"MMMM D YYYY, h:mm:ss a"
 												)}
 											</label>
 										</div>
 										<div className="requester-details__createdlast">
 											<label id="label-createdlast"> Date Accepted: </label>
 											<label>
-												{moment(ticket.createdAt).format("YYYY-MM-DD HH:mm:ss")}
+												{moment(ticket.createdAt).format(
+													"MMMM D YYYY, h:mm:ss a"
+												)}
 											</label>
 										</div>
 										{(ticket.status === "Open" ||
@@ -289,7 +291,7 @@ const RequestedTicket = () => {
 													<label id="label-createdlast"> Date Resolved: </label>
 													<label>
 														{moment(ticket.resolvedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -307,7 +309,7 @@ const RequestedTicket = () => {
 													<label id="label-createdlast"> Date Reopened: </label>
 													<label>
 														{moment(ticket.reopenedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -381,7 +383,7 @@ const RequestedTicket = () => {
 													<label id="label-createdlast"> Date Resolved: </label>
 													<label>
 														{moment(ticket.resolvedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -413,7 +415,7 @@ const RequestedTicket = () => {
 													<label id="label-createdlast"> Date Rejected: </label>
 													<label>
 														{moment(ticket.rejectedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>
@@ -445,7 +447,7 @@ const RequestedTicket = () => {
 													<label id="label-createdlast"> Date Voided: </label>
 													<label>
 														{moment(ticket.voidedAt).format(
-															"YYYY-MM-DD HH:mm:ss"
+															"MMMM D YYYY, h:mm:ss a"
 														)}
 													</label>
 												</div>

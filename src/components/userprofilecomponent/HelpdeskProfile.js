@@ -89,11 +89,7 @@ const Profile = () => {
 						</div>
 
 						<div className="header_viewingticket">
-							<h3>{user.email}</h3>
-							<h3>
-								{user.firstName} {user.lastName}
-							</h3>
-							<h3>{user.role}</h3>
+							<h3>User Profile</h3>
 						</div>
 
 						{loading ? (

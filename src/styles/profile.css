@@ -62,7 +62,7 @@
 
 .user-userprofiledetailscontent {
 	padding: 0px 35px;
-	height: calc(75vh - 120px);
+	height: calc(75vh - 70px);
 	width: 100%;
 	margin: 10px;
 	overflow: auto;

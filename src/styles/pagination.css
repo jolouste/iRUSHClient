@@ -9,15 +9,22 @@
 	align-items: center;
 }
 
+.pagination-container__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .show-entries {
 	font-size: 12px;
 	font-family: Poppins-bold;
 	text-transform: uppercase;
+	padding-right: 5px;
 }
 
 .pagination-container__next-button,
 .pagination-container__prev-button {
-	padding: 0 10px;
+	padding: 0px 10px;
 	margin: 0 5px;
 	background-color: rgb(254, 192, 15);
 	border: none;

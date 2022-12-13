@@ -57,6 +57,16 @@ const ResolvedTicketsClientList = ({
 		}
 	};
 
+	//get the first characters of each word in ticket category
+	const getFirstChar = ticketCategory => {
+		const splitStr = ticketCategory.split(" ");
+		let firstChar = "";
+		for (let i = 0; i < splitStr.length; i++) {
+			firstChar += splitStr[i].charAt(0);
+		}
+		return firstChar;
+	};
+
 	return (
 		<>
 			<div className="requestedticket-datatablelist__table">
@@ -101,20 +111,6 @@ const ResolvedTicketsClientList = ({
 														/>
 													</span>
 												</th>
-
-												<th className="reopentableheader-title">
-													Category
-													<span>
-														<img
-															id="sortIcon"
-															src={sortIcon}
-															alt=" "
-															onClick={() => sorting("ticketCategory")}
-															style={{ cursor: "pointer" }}
-														/>
-													</span>
-												</th>
-
 												<th className="reopentableheader-title">
 													Date Created
 													<span>
@@ -157,20 +153,21 @@ const ResolvedTicketsClientList = ({
 																color: "#000",
 															}}
 														>
-															<strong>{ticket.ticketNo}</strong>
+															<strong>
+																{" "}
+																{ticket.ticketNo} -{" "}
+																{getFirstChar(
+																	ticket.ticketCategory
+																).toUpperCase()}
+															</strong>
 														</td>
 
 														<td className="reopentickettable-cell">
 															{ticket.ticketSubject}
 														</td>
-
-														<td className="reopentickettable-cell">
-															{ticket.ticketCategory}
-														</td>
-
 														<td className="reopentickettable-cell">
 															{moment(ticket.createdAt).format(
-																"DD/MM/YYYY HH:mm:ss"
+																"MMMM D YYYY, h:mm:ss a"
 															)}
 														</td>
 

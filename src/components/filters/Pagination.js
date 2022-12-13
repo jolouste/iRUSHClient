@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/pagination.css";
+import Textfield from "@mui/material/TextField";
+import MenuItem from "@mui/material/MenuItem";
 
 const Pagination = ({ page, total, limit, setPage, setLimit }) => {
 	const totalPages = Math.ceil(total / limit);
@@ -38,30 +40,58 @@ const Pagination = ({ page, total, limit, setPage, setLimit }) => {
 		}
 	};
 
+	const entriesOption = [
+		{
+			id: 1,
+			name: "DEFAULT",
+			value: "8",
+		},
+		{
+			id: 2,
+			name: "20",
+			value: "20",
+		},
+		{
+			id: 3,
+			name: "30",
+			value: "30",
+		},
+		{
+			id: 4,
+			name: "50",
+			value: "50",
+		},
+	];
+
 	return (
 		<div className="pagination-container">
 			<div className="pagination-container__wrapper">
 				{total > 0 && (
 					<>
 						<span className="show-entries"> Show entries by: </span>
-						<select
+						<Textfield
+							inputProps={{
+								sx: {
+									color: "#000",
+									padding: "0 15px",
+									fontSize: "13px",
+								},
+							}}
+							select
 							className="pagination-limitselect"
 							onChange={e => setLimitEntries(e)}
 							value={limit}
 						>
-							<option className="option-limitval" value="8">
-								DEFAULT
-							</option>
-							<option className="option-limitval" value="20">
-								20
-							</option>
-							<option className="option-limitval" value="30">
-								30
-							</option>
-							<option className="option-limitval" value="50">
-								50
-							</option>
-						</select>
+							{entriesOption.map((option, index) => (
+								<MenuItem
+									id={index}
+									value={option.value}
+									style={{ fontSize: "14px" }}
+								>
+									{option.name}
+								</MenuItem>
+							))}
+						</Textfield>
 
 						<button
 							className="pagination-container__prev-button"
