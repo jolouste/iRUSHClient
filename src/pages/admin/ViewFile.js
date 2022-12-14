@@ -17,11 +17,9 @@ const ViewFile = () => {
 		instance
 			.get(`/tickets/getfile/${param.id}`, {
 				responseType: "blob",
-			})
-			.then(response => {
-				console.log(response.data);
-				const file = new Blob([response.data], {
-					type:
+
+				headers: {
+					"Content-Type":
 						"application/pdf" ||
 						"image/png" ||
 						"image/jpeg" ||
@@ -29,10 +27,17 @@ const ViewFile = () => {
 						"application/vnd.ms-excel" ||
 						"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ||
 						"text/csv",
+				},
+			})
+			.then(response => {
+				const file = new Blob([response.data], {
+					//check the file type and set the correct mime type
+					type: response.headers["content-type"],
 				});
-
 				const fileURL = URL.createObjectURL(file);
 				setFile(fileURL);
+
+				console.log(file);
 			})
 			.catch(error => {
 				if (error.response.status === 401) {

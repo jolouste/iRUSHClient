@@ -228,8 +228,13 @@ const HelpdeskNewServiceRequestsData = () => {
 									{serviceRequestData.attachments && (
 										<div className="requester-details__subject">
 											<label> Attachments </label>
-											<p className="requester-details__container">
-												{serviceRequestData.attachments}
+											<p>
+												<a
+													className="requester-details__container"
+													href={`/helpdesksupport/servicerequests/getfile/${serviceRequestData._id}`}
+												>
+													{serviceRequestData.attachments}
+												</a>
 											</p>
 										</div>
 									)}
