@@ -34,6 +34,7 @@ const ReopenticketData = () => {
 		rejectedAt: "",
 		createdAt: "",
 		updatedAt: "",
+		isReopened: "",
 	});
 
 	useEffect(() => {

@@ -180,7 +180,7 @@ const NewServiceRequestslist = ({
 														{service.ticketSubject}
 													</td>
 													<td className="tickettable-cell">
-														{service.requester}
+														{service.requesterEmail}
 													</td>
 													<td className="tickettable-cell">
 														{service.clientUnit.toUpperCase()}
