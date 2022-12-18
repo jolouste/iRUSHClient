@@ -46,7 +46,7 @@ const Homepage = () => {
 										buttonSize="btn--medium"
 										buttonStyle="btn--solid__servicerequest"
 									>
-										FAQ
+										FAQs
 									</Buttons>
 								</div>
 							</Link>

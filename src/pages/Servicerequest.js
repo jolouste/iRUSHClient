@@ -12,10 +12,10 @@ import instanceNoAuth from "../axios/instanceNoAuth";
 
 function Servicerequest() {
 	const subject = [
-		{ _id: 1, title: "Credentials" },
-		{ _id: 2, title: "Authentication" },
-		{ _id: 3, title: "Verification" },
-		{ _id: 4, title: "Other related concerns" },
+		{ _id: 1, title: "Submission of missing documents" },
+		{ _id: 2, title: "Shifting/Transfer" },
+		{ _id: 3, title: "Transcripts of Records" },
+		{ _id: 4, title: "Updating Information" },
 	];
 
 	const [validUrl, setValidUrl] = useState(false);

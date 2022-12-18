@@ -105,22 +105,28 @@ const Dashboard = () => {
 	//FOR GENERATION OF REPORTS
 	const [file, setFile] = useState(null);
 	useEffect(() => {
-		instance
-			.get("/tickets/report", {
-				responseType: "blob",
-			})
-			.then(response => {
-				const file = new Blob([response.data], {
-					type: response.headers["content-type"],
+		const fetchReport = async () => {
+			await instance
+				.get("/tickets/report", {
+					responseType: "blob",
+				})
+				.then(response => {
+					const file = new Blob([response.data], {
+						type: response.headers["content-type"],
+					});
+					const fileURL = window.URL.createObjectURL(file);
+					setFile(fileURL);
+					console.log(response.data);
+				})
+				.catch(error => {
+					if (error.response.status === 401) {
+						window.location.href = "/login";
+					}
+
+					console.log(error);
 				});
-				const fileURL = URL.createObjectURL(file);
-				setFile(fileURL);
-			})
-			.catch(error => {
-				if (error.response.status === 401) {
-					window.location.href = "/login";
-				}
-			});
+		};
+		fetchReport();
 	}, []);
 
 	return (
