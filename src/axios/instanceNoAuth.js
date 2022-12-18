@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instanceNoAuth = axios.create({
-	baseURL: "http://54.86.88.74/api/",
+	baseURL: "http://localhost:5000/api/",
 	headers: {
 		"Content-Type": "application/json",
 	},

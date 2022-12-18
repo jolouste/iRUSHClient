@@ -12,6 +12,7 @@ import Passwordreset from "./pages/Passwordreset";
 import Pagebroken from "./components/Pagebroken";
 import ReopenticketData from "./pages/ReopenticketData";
 import LikertSurvey from "./pages/LikertSurvey";
+import Faqs from "./pages/Faqs";
 //ROUTES FOR ADMIN, HELPDESK, IT SUPPORT. (PRIVATE ROUTES)
 import AdminRoutes from "./private/AdminRoutes";
 import HelpdeskRoutes from "./private/HelpdeskRoutes";
@@ -67,6 +68,11 @@ function App() {
 					<Routes>
 						<Route exact path="/" element={<Homepage />} />
 						<Route exact path="/login" element={<Login />} />
+						<Route
+							exact
+							path="/frequently-asked-questions"
+							element={<Faqs />}
+						/>
 						<Route exact path="/forgotpassword" element={<Forgotpassword />} />
 						<Route
 							exact

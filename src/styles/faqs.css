@@ -1,0 +1,132 @@
+@font-face {
+	font-family: iRUSHfont;
+	src: url("../assets/fonts/TrajanPro-Regular.ttf");
+}
+
+.faq-container {
+	background-image: linear-gradient(
+		rgba(254, 192, 15),
+		rgba(255, 226, 144),
+		rgba(255, 255, 255)
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.faq-container__wrapper {
+	padding: 50px 210px;
+}
+
+.faq-container__header {
+	display: flex;
+	justify-content: center;
+}
+
+.faq-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.faq-header__logo {
+	margin-right: 28px;
+}
+
+#faq-ustlogoblck {
+	width: 124px;
+	height: 124px;
+}
+
+.faq-header--text {
+	font-family: iRUSHfont;
+}
+
+#faqheader__ust {
+	font-family: iRUSHfont;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+#faqheader__ust-sch {
+	font-family: iRUSHfont;
+	font-size: 35px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+}
+
+.accordion-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.accordion__wrapper {
+	padding-left: 180px;
+}
+
+.container--visible {
+	border: 1px solid #000;
+	margin-bottom: 8px;
+}
+
+.faq--container__questions--active {
+	justify-content: space-between;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.faq--container__questions--inactive {
+	justify-content: space-between;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.faq__question {
+	font-size: 15px;
+	font-weight: 600;
+	align-items: justify;
+	text-transform: uppercase;
+}
+
+.faq__answer {
+	color: #000;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.container_answer--hide {
+	max-height: 0;
+	overflow: hidden;
+	transition: all 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.container__answer--show {
+	height: auto;
+	max-height: 999;
+	padding: 27px;
+	transition: all 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-container__tiger {
+	position: absolute;
+	width: 144px;
+	height: 254px;
+	left: 190px;
+	bottom: -50px;
+}
+
+@keyframes dropdown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}

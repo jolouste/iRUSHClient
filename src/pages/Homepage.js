@@ -40,6 +40,17 @@ const Homepage = () => {
 						</div>
 
 						<div className="header-btns">
+							<Link to="/frequently-asked-questions">
+								<div className="btn-login">
+									<Buttons
+										buttonSize="btn--medium"
+										buttonStyle="btn--solid__servicerequest"
+									>
+										FAQ
+									</Buttons>
+								</div>
+							</Link>
+
 							<Link to="/login">
 								<div className="btn-login">
 									<Buttons
