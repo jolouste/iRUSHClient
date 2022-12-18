@@ -36,8 +36,6 @@ const ViewFile = () => {
 				});
 				const fileURL = URL.createObjectURL(file);
 				setFile(fileURL);
-
-				console.log(file);
 			})
 			.catch(error => {
 				if (error.response.status === 401) {

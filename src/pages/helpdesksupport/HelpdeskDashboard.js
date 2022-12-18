@@ -10,6 +10,7 @@ import Search from "../../components/filters/Search";
 import Pagination from "../../components/filters/Pagination";
 import instance from "../../axios/axios";
 import HelpdeskTicketLists from "../../components/helpdeskdashboard-components/HelpdeskTicketLists";
+import pdficon from "../../images/img/pdficon.png";
 
 const Helpdeskdashboard = () => {
 	const [assignedTicketData, setAssignedTicketData] = useState([]);
@@ -76,6 +77,27 @@ const Helpdeskdashboard = () => {
 
 		fetchAssignedTicketData();
 	}, [priority, page, limit, search, category, dateFrom, dateTo]);
+
+	//FOR GENERATION OF REPORTS
+	const [file, setFile] = useState(null);
+	useEffect(() => {
+		instance
+			.get("/tickets/helpdesksupport/report/", {
+				responseType: "blob",
+			})
+			.then(response => {
+				const file = new Blob([response.data], {
+					type: response.headers["content-type"],
+				});
+				const fileURL = URL.createObjectURL(file);
+				setFile(fileURL);
+			})
+			.catch(error => {
+				if (error.response.status === 401) {
+					window.location.href = "/login";
+				}
+			});
+	}, []);
 
 	return (
 		<>
@@ -169,6 +191,24 @@ const Helpdeskdashboard = () => {
 										</div>
 										<div className="filtertickets-searchandreport__container">
 											<Search setSearch={search => setSearch(search)} />
+											{!loading && (
+												<div className="generatereport-container">
+													<span>Generate Report: </span>
+													<div className="generatereport">
+														<img
+															src={pdficon}
+															alt="pdf icon"
+															style={{
+																width: "26px",
+																cursor: "pointer",
+															}}
+															onClick={() => {
+																window.open(file);
+															}}
+														/>
+													</div>
+												</div>
+											)}
 										</div>
 									</div>
 

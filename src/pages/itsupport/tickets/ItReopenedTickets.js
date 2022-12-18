@@ -7,6 +7,7 @@ import Search from "../../../components/filters/Search";
 import Pagination from "../../../components/filters/Pagination";
 import ItReopenedTicketsLists from "../../../components/ticketstats-it/ItReopenedTicketsLists";
 import instance from "../../../axios/axios";
+import pdficon from "../../../images/img/pdficon.png";
 
 const ItReopenedTicket = ({ ticketNavId }) => {
 	const [reopenedTickets, setReopenedTickets] = useState([]);
@@ -52,6 +53,26 @@ const ItReopenedTicket = ({ ticketNavId }) => {
 		fetchReopenedTickets();
 	}, [search, priority, category, page, limit, dateFrom, dateTo]);
 
+	const [file, setFile] = useState(null);
+	useEffect(() => {
+		instance
+			.get("/tickets/itsupport/report/reopenedtickets", {
+				responseType: "blob",
+			})
+			.then(response => {
+				const file = new Blob([response.data], {
+					type: response.headers["content-type"],
+				});
+				const fileURL = URL.createObjectURL(file);
+				setFile(fileURL);
+			})
+			.catch(error => {
+				if (error.response.status === 401) {
+					window.location.href = "/login";
+				}
+			});
+	}, []);
+
 	if (ticketNavId === 5) {
 		return (
 			<>
@@ -79,6 +100,24 @@ const ItReopenedTicket = ({ ticketNavId }) => {
 						</div>
 						<div className="filtertickets-searchandreport__container">
 							<Search setSearch={search => setSearch(search)} />
+							{!loading && (
+								<div className="generatereport-container">
+									<span>Generate Report: </span>
+									<div className="generatereport">
+										<img
+											src={pdficon}
+											alt="pdf icon"
+											style={{
+												width: "26px",
+												cursor: "pointer",
+											}}
+											onClick={() => {
+												window.open(file);
+											}}
+										/>
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
 

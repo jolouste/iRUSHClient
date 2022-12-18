@@ -15,6 +15,7 @@ import BarChart from "../../components/charts/BarChart";
 import LineChart from "../../components/charts/LineChart";
 import BarChartLikert from "../../components/charts/BarChartLikert";
 import instance from "../../axios/axios";
+import pdficon from "../../images/img/pdficon.png";
 
 const Dashboard = () => {
 	const [dataTickets, setDataTickets] = useState([]);
@@ -100,6 +101,27 @@ const Dashboard = () => {
 		fetchTickets();
 		fetchiRUSHUsers();
 	}, [page, limit, search, priority, category, dateFrom, dateTo]);
+
+	//FOR GENERATION OF REPORTS
+	const [file, setFile] = useState(null);
+	useEffect(() => {
+		instance
+			.get("/tickets/report", {
+				responseType: "blob",
+			})
+			.then(response => {
+				const file = new Blob([response.data], {
+					type: response.headers["content-type"],
+				});
+				const fileURL = URL.createObjectURL(file);
+				setFile(fileURL);
+			})
+			.catch(error => {
+				if (error.response.status === 401) {
+					window.location.href = "/login";
+				}
+			});
+	}, []);
 
 	return (
 		<>
@@ -192,6 +214,24 @@ const Dashboard = () => {
 										</div>
 										<div className="filtertickets-searchandreport__container">
 											<Search setSearch={search => setSearch(search)} />
+											{!loading && (
+												<div className="generatereport-container">
+													<span>Generate Report: </span>
+													<div className="generatereport">
+														<img
+															src={pdficon}
+															alt="pdf icon"
+															style={{
+																width: "26px",
+																cursor: "pointer",
+															}}
+															onClick={() => {
+																window.open(file);
+															}}
+														/>
+													</div>
+												</div>
+											)}
 										</div>
 									</div>
 

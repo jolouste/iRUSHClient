@@ -9,6 +9,7 @@ import PieChart from "../../../components/tickestats/resolvedticket/charts/PieCh
 import DoughnutChart from "../../../components/tickestats/resolvedticket/charts/DoughnutChart";
 import BarChart from "../../../components/tickestats/resolvedticket/charts/BarChart";
 import instance from "../../../axios/axios";
+import pdficon from "../../../images/img/pdficon.png";
 
 const ResolvedTickets = ({ ticketNavId }) => {
 	const [resolvedTickets, setResolvedTickets] = useState([]);
@@ -53,6 +54,28 @@ const ResolvedTickets = ({ ticketNavId }) => {
 		fetchOpenTickets();
 	}, [search, priority, category, page, limit, dateFrom, dateTo]);
 
+	//FOR GENERATION OF REPORTS
+	const [file, setFile] = useState(null);
+	useEffect(() => {
+		instance
+			.get("/tickets/report/resolvedtickets", {
+				responseType: "blob",
+			})
+			.then(response => {
+				const file = new Blob([response.data], {
+					type: response.headers["content-type"],
+				});
+
+				const fileURL = window.URL.createObjectURL(file);
+				setFile(fileURL);
+			})
+			.catch(error => {
+				if (error.response.status === 401) {
+					window.location.href = "/login";
+				}
+			});
+	}, []);
+
 	if (ticketNavId === 2) {
 		return (
 			<>
@@ -80,6 +103,24 @@ const ResolvedTickets = ({ ticketNavId }) => {
 						</div>
 						<div className="filtertickets-searchandreport__container">
 							<Search setSearch={search => setSearch(search)} />
+							{!loading && (
+								<div className="generatereport-container">
+									<span>Generate Report: </span>
+									<div className="generatereport">
+										<img
+											src={pdficon}
+											alt="pdf icon"
+											style={{
+												width: "26px",
+												cursor: "pointer",
+											}}
+											onClick={() => {
+												window.open(file);
+											}}
+										/>
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
 
